@@ -11,7 +11,7 @@ window.title("Cross Roads C A L C U L A T O R E")
 window.configure(background='black')
 # set diplay label.
 shintolabel = Entry(window, width=50)
-shintolabel.grid(row=0, column=0, columnspan=4)
+shintolabel.grid(row=0, column=0, columnspan=5)
 
 
 def button_click(number_click):
@@ -75,17 +75,11 @@ def button_equal():
         shintolabel.insert(0, addition - int(equal))
 
 
-shintobtn_c = Button(window, text='C', padx=30, pady=10, command=button_clr)
-shintobtn_c.grid(row=1, column=0)
+shintobtn_c = Button(window, text='C', padx=70, pady=10, command=button_clr)
+shintobtn_c.grid(row=1, column=0, columnspan=2)
 
-shintobtn_correct = Button(window, text="Correct", padx=30, pady=10, command=lambda: button_click(-1))
-shintobtn_correct.grid(row=1, column=1)
-
-shintobtn_perc = Button(window, text="%", padx=30, pady=10, )
-shintobtn_perc.grid(row=1, column=2)
-
-shintobtn_div = Button(window, text="/", padx=30, pady=10, command=button_divison)
-shintobtn_div.grid(row=1, column=3)
+shintobtn_div = Button(window, text="/", padx=70, pady=10, command=button_divison, bg='red')
+shintobtn_div.grid(row=1, column=3, columnspan=2)
 
 # set buttons second row
 
@@ -96,7 +90,7 @@ shintobtn_8 = Button(window, text="8", padx=30, pady=10, command=lambda: button_
 shintobtn_8.grid(row=2, column=1)
 
 shintobtn_9 = Button(window, text="9", padx=30, pady=10, command=lambda: button_click(9))
-shintobtn_9.grid(row=2, column=2)
+shintobtn_9.grid(row=2, column=2, rowspan=1)
 
 shintobtn_str = Button(window, text="*", padx=30, pady=10, command=button_multiplication)
 shintobtn_str.grid(row=2, column=3)
